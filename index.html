@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Un regalo para ti 🌻</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BB%3C/text%3E%3C/svg%3E">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+        FONDO
+=========================== -->
+
+<div id="background">
+    <div id="cieloNocturno">
+        <div id="sky-gradient"></div>
+        <div id="stars"></div>
+        <div id="particles"></div>
+        <div id="shooting-stars"></div>
+    </div>
+    <div id="ambientGlow"></div>
+    <div id="moon">
+        <div class="moon-cara moon-llena"></div>
+        <div class="moon-cara moon-creciente"></div>
+    </div>
+
+</div>
+
+<!-- INTRO -->
+<section id="intro">
+
+    <div class="contenido">
+
+        <h1 id="typewriter"></h1>
+
+        <p id="subtitulo"></p>
+
+        <button id="abrirRegalo" class="oculto">🌻 Abrir mi regalo</button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+            JARDÍN
+=========================== -->
+
+<main id="garden" class="hidden">
+    <div id="semillaGlow"></div>
+    <div id="fireflies"></div>
+    <div id="flowers"></div>
+
+    <div id="mensajeFinal" class="mensaje-final oculto">
+        <p id="textoFinal">Espero que estas flores, aunque no sean reales,<br>te alegren el día tanto como tú alegras los míos. 🌻</p>
+    </div>
+</main>
+
+<!-- ===========================
+        MÚSICA DE FONDO
+=========================== -->
+
+<audio id="musicaFondo" loop preload="auto">
+    <source src="assets/audio/musica.mp3" type="audio/mpeg">
+</audio>
+
+<button id="botonMusica" class="oculto" aria-label="Silenciar música">🔊</button>
+
+<!-- ===========================
+    CORTINA DE TRANSICIÓN
+=========================== -->
+
+<div id="cortina"></div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
