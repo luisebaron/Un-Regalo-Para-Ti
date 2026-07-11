@@ -1,0 +1,324 @@
+/*=========================================
+            BRILLO DEL TÍTULO
+=========================================*/
+
+@keyframes brillo{
+
+    from{
+
+        text-shadow:
+        0 0 10px gold,
+        0 0 20px gold;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 25px yellow,
+        0 0 50px gold,
+        0 0 70px yellow;
+
+    }
+
+}
+
+#titulo{
+
+    animation:brillo 2s ease-in-out infinite alternate;
+
+}
+
+/*=========================================
+            LUNA
+=========================================*/
+
+@keyframes moonGlow{
+
+    from{
+
+        transform:scale(1);
+
+        filter:brightness(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+        filter:brightness(1.2);
+
+    }
+
+}
+
+#moon{
+
+    animation:moonGlow 5s ease-in-out infinite alternate;
+
+}
+
+/*=========================================
+            ESTRELLAS
+=========================================*/
+
+@keyframes parpadear{
+
+    0%{
+
+        opacity:.2;
+
+        transform:scale(.6);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.6);
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+        transform:scale(.6);
+
+    }
+
+}
+
+.star{
+    animation:parpadear 4s ease-in-out infinite;
+}
+
+/*=========================================
+            PARTÍCULAS
+=========================================*/
+
+@keyframes flotar{
+
+    from{
+
+        transform:
+        translateY(40px);
+
+        opacity:0;
+
+    }
+
+    30%{
+
+        opacity:.7;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-80px);
+
+        opacity:0;
+
+    }
+
+}
+
+.particle{
+    animation:flotar 8s linear infinite;
+}
+
+/*=========================================
+        ESTRELLA FUGAZ
+=========================================*/
+
+@keyframes shooting{
+
+    from{
+
+        transform:
+        translate(0,0)
+        rotate(-35deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(600px,350px)
+        rotate(-35deg);
+
+        opacity:0;
+
+    }
+
+}
+
+.shooting{
+
+    animation:shooting 2s linear forwards;
+
+}
+
+/*=========================================
+            BOTÓN
+=========================================*/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+#abrirRegalo{
+
+    animation:pulse 3s infinite;
+
+}
+
+/*=========================================
+            CURSOR
+=========================================*/
+
+@keyframes cursor{
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+/*=========================================
+        LUCIÉRNAGAS
+=========================================*/
+
+@keyframes flotarLuciernaga{
+
+    0%{
+        transform:translate(0,0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    50%{
+        transform:translate(var(--dx,20px),var(--dy,-30px));
+    }
+
+    85%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translate(0,0);
+        opacity:0;
+    }
+
+}
+
+.firefly{
+    animation:flotarLuciernaga var(--dur,6s) ease-in-out infinite;
+}
+
+/*=========================================
+        VIENTO EN EL RAMO
+=========================================*/
+
+@keyframes vientoRamo{
+
+    0%{
+        transform:
+            translateX(-50%)
+            rotate(var(--rot,0deg))
+            scale(var(--s,1))
+            scaleY(1);
+    }
+
+    25%{
+        transform:
+            translateX(-50%)
+            rotate(calc(var(--rot,0deg) + 2.5deg))
+            scale(var(--s,1))
+            scaleY(1);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            rotate(var(--rot,0deg))
+            scale(var(--s,1))
+            scaleY(1);
+    }
+
+    75%{
+        transform:
+            translateX(-50%)
+            rotate(calc(var(--rot,0deg) - 2.5deg))
+            scale(var(--s,1))
+            scaleY(1);
+    }
+
+    100%{
+        transform:
+            translateX(-50%)
+            rotate(var(--rot,0deg))
+            scale(var(--s,1))
+            scaleY(1);
+    }
+
+}
+
+/*=========================================
+        PULSO DE LA SEMILLA
+=========================================*/
+
+@keyframes pulsoSemilla{
+    0%,100%{
+        box-shadow:0 0 10px rgba(205,220,57,.5);
+    }
+    50%{
+        box-shadow:0 0 18px rgba(205,220,57,.95);
+    }
+}
+
+/*=========================================
+    LUCIÉRNAGAS DEL CURSOR / TOQUE
+=========================================*/
+
+@keyframes apagarCursorFirefly{
+    0%{
+        opacity:1;
+        transform:scale(1);
+    }
+    100%{
+        opacity:0;
+        transform:scale(.3) translateY(-18px);
+    }
+}
